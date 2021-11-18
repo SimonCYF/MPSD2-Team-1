@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/grad"
+    tools:context=".chat.Chat">
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/extraboldfont"
+        android:paddingTop="40dp"
+        android:text="@string/consultant"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="50sp"></TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="380dp"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/type"
+        android:layout_below="@+id/username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-3dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/customborder" />
+
+    <RelativeLayout
+        android:id="@+id/type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="15dp">
+
+        <EditText
+            android:id="@+id/send_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/enter_btn"
+            android:background="@drawable/customborder"
+            android:hint="@string/type" />
+
+        <ImageButton
+            android:id="@+id/enter_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_action_name"
+            android:outlineAmbientShadowColor="@color/grey"
+            android:outlineSpotShadowColor="@color/grey" />
+    </RelativeLayout>
+</RelativeLayout>

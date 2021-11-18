@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    
+    >
+        <item
+            android:id="@+id/navigationDrawerViewNews"
+            android:icon="@drawable/ic_baseline_text_snippet_24"
+            android:title="View News" />
+
+        <item
+            android:id="@+id/navigationDrawerViewRealtimeNews"
+            android:icon="@drawable/ic_baseline_fiber_new_24"
+            android:title="View Covid Updates" />
+
+        <item
+            android:id="@+id/navigationDrawerNearbyClinic"
+            android:icon="@drawable/ic_baseline_location_on_24"
+            android:title="View Swab Test Clinic Near You" />
+
+        <item
+            android:id="@+id/navigationDrawerChat"
+            android:icon="@drawable/ic_baseline_chat_24"
+            android:title="Chat With Expert" />
+
+        <item
+            android:id="@+id/navigationDrawerSettings"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:title="Settings" />
+
+        <item
+            android:id="@+id/navigationDrawerLogout"
+            android:icon="@drawable/ic_baseline_follow_the_signs_24"
+            android:title="Logout" />
+
+</menu>

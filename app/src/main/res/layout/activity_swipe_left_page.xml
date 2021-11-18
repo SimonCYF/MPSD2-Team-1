@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/grad"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <TextView
+        android:id="@+id/covidVaccine"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="3dp"
+        android:text="@string/view_vaccine_brand"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:fontFamily="@font/extraboldfont"
+        tools:layout_editor_absoluteX="67dp"
+        tools:layout_editor_absoluteY="2dp" />
+
+    <ImageButton
+        android:id="@+id/btn_left_left"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        app:tint="@color/white"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_undo_24" />
+
+    <ImageButton
+        android:id="@+id/btn_right_left"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="355dp"
+        app:tint="@color/white"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="12dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_redo_24" />
+
+    <ScrollView
+        android:layout_width="384dp"
+        android:layout_height="640dp"
+        android:layout_below="@id/covidVaccine"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="60dp"
+        android:background="@color/design_default_color_background">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleViewForVaccines"
+                android:layout_width="match_parent"
+                android:layout_height="475dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/textViewForPdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recycleViewForVaccines"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/boldfont"
+                android:text="Click to View The PDF"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewForPdf" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <include
+        android:id="@+id/mytoolbar"
+        layout="@layout/activity_toolbar" />
+
+</RelativeLayout>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grad"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/covidName"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="3dp"
+        android:text="@string/view_covid_virus_strain"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:fontFamily="@font/extraboldfont"
+        tools:layout_editor_absoluteX="67dp"
+        tools:layout_editor_absoluteY="2dp" />
+
+    <ImageButton
+        android:id="@+id/btn_left"
+        android:layout_width="44dp"
+        android:layout_height="42dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        app:tint="@color/white"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_undo_24" />
+
+    <ImageButton
+        android:id="@+id/btn_right"
+        android:layout_width="44dp"
+        android:layout_height="42dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="355dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="12dp"
+        app:tint="@color/white"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_redo_24" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="383dp"
+        android:layout_height="470dp"
+        android:layout_below="@+id/covidName"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="60dp"
+        android:background="@color/design_default_color_background"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="315dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleViewForCovidBackground"
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/covidVariant"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="29dp"
+                android:fontFamily="@font/boldfont"
+                android:gravity="center_horizontal"
+                android:text="Type Of Covid-19 Viruses Variant"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleViewForCovidVariant"
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:layout_below="@id/covidVariant"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="29dp"
+                android:gravity="center_horizontal"
+                android:text="How Covid-19 Spread"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:fontFamily="@font/boldfont" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleViewForHowCovidSpread"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/preventCovid"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal" />
+
+
+            <TextView
+                android:id="@+id/preventCovid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="29dp"
+                android:gravity="center_horizontal"
+                android:text="How To Prevent Wide-spread Of Covid-19"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:fontFamily="@font/boldfont" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleViewForStepsToPrevent"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/preventCovid"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/covidSymptom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="29dp"
+                android:gravity="center_horizontal"
+                android:text="Symptoms of Covid-19"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:fontFamily="@font/boldfont" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleViewForCovidSymptom"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/covidSymptom"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include
+        android:id="@+id/mytoolbar"
+        layout="@layout/activity_toolbar" />
+
+
+</RelativeLayout>

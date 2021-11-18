@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "1077339658711",
+    "firebase_url": "https://mpsd2-377c8-default-rtdb.firebaseio.com",
+    "project_id": "mpsd2-377c8",
+    "storage_bucket": "mpsd2-377c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1077339658711:android:b8cdaa11fad3927058d392",
+        "android_client_info": {
+          "package_name": "com.example.covidapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1077339658711-d3deoar8kmih4h382rq5qj9ags2oklrf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCknR6LP-X4uhTg8oKICCpx8y43f5HXfr0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1077339658711-d3deoar8kmih4h382rq5qj9ags2oklrf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1077339658711:android:25e25f02c71d688458d392",
+        "android_client_info": {
+          "package_name": "com.example.mpsd2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1077339658711-d3deoar8kmih4h382rq5qj9ags2oklrf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCknR6LP-X4uhTg8oKICCpx8y43f5HXfr0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1077339658711-d3deoar8kmih4h382rq5qj9ags2oklrf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

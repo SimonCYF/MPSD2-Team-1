@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">MPSD2</string>
+
+    //Register
+    <string name="register_title">REGISTER</string>
+    <string name="login_title">LOGIN</string>
+    <string name="username_txt">Username</string>
+    <string name="email_txt">Email</string>
+    <string name="phone_txt">Phone</string>
+    <string name="password_txt">Password</string>
+    <string name="confirm_txt">Confirm Password</string>
+    <string name="register_btn">Submit</string>
+    <string name="back_btn">Back</string>
+    <string name="login_btn">Login</string>
+    <string name="account_btn">Don\'t have an account? REGISTER</string>
+
+    //Counselor
+    <string name="consultant">Consultant</string>
+    <string name="health_btn">Health Consultant</string>
+    <string name="tech_btn">Technical Consultant</string>
+
+    //Chat
+    <string name="chat">Chat</string>
+    <string name="type">Type a message</string>
+    <string name="enter_btn">Enter</string>
+
+    //Profile
+    <string name="profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    //View News
+    <string name="view_covid_virus_strain">Covid-19 Background</string>
+    <string name="view_vaccine_brand">Covid-19 Vaccine</string>
+    <string name="view_covid_news">Latest News</string>
+    <string name="viewNewsPage">Covid-19 News Page</string>
+    <string name="google_maps_key" translatable="false">AIzaSyCX2B_cxMuqBN_0VREUfxwTvx57fPK3q0o</string>
+
+    //Navigation Drawer
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+</resources>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:elevation="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_alignParentBottom="true"
+    >
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="0dp"
+        android:background="@color/white"
+        android:elevation="6dp"
+        app:tabIconTint="@color/headings"
+        app:tabIndicatorAnimationDuration="1200"
+        app:tabIndicatorColor="@color/white"
+        app:tabInlineLabel="true"
+        app:tabMode="scrollable"
+        app:tabRippleColor="@color/purple_200"
+        app:tabTextColor="@color/headings">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/navToViewNews"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarStyle="insideInset"
+            android:text="View News"
+            android:textColor="@color/pearlwhite"
+            android:textStyle="bold">
+
+        </com.google.android.material.tabs.TabItem>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/navToViewUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Updates ">
+
+        </com.google.android.material.tabs.TabItem>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/navToViewLocation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Location">
+
+        </com.google.android.material.tabs.TabItem>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/navToChat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Chat">
+
+        </com.google.android.material.tabs.TabItem>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/navToViewProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Profile">
+
+        </com.google.android.material.tabs.TabItem>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/navToLogout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Logout">
+
+        </com.google.android.material.tabs.TabItem>
+
+    </com.google.android.material.tabs.TabLayout>
+
+</RelativeLayout>
+
+

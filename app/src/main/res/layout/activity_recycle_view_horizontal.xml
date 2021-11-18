@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="475dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:background="@color/lightgrey"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="4dp"
+        app:cardMaxElevation="2dp"
+        app:cardElevation="1dp"
+        android:layout_centerInParent="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/grad">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/horizontalImage"
+                android:layout_width="115dp"
+                android:layout_height="115dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/horizontalName"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_below="@+id/horizontalImage"
+                android:layout_alignParentEnd="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="5dp"
+                android:autoSizeMaxTextSize="15sp"
+                android:autoSizeMinTextSize="8sp"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:text="Hey"
+                android:textColor="@color/white"
+                android:fontFamily="@font/boldfont" />
+
+            <TextView
+                android:id="@+id/horizontalDetails"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_below="@+id/horizontalName"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/regularfont"
+                android:includeFontPadding="false"
+                android:justificationMode="inter_word"
+                android:text="Bobi Bobi Bobi Bobi Bobi Bobi "
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

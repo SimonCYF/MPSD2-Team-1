@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/grad"
+    tools:context=".chat.Consultant">
+
+    <TextView
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="25dp"
+        android:textStyle="bold"
+        android:paddingTop="40dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chat"
+        android:fontFamily="@font/extraboldfont"
+        android:textSize="50sp">
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="68dp"
+        android:layout_marginStart="50dp" >
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:tabSelectedTextColor="@color/black"
+            app:tabIndicatorColor="@color/black"
+            app:tabTextColor="@color/black"
+            app:tabMode="fixed"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+    </LinearLayout>
+
+
+
+    <include
+        android:id="@+id/mytoolbar"
+        layout="@layout/activity_toolbar" />
+
+
+</LinearLayout>
