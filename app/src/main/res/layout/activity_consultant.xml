@@ -8,10 +8,12 @@
     android:background="@drawable/grad"
     tools:context=".chat.Consultant">
 
+
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="390dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:gravity="center"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/extraboldfont"
         android:paddingTop="40dp"
@@ -23,12 +25,13 @@
 
     </TextView>
 
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="45dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="30dp"
         android:layout_marginStart="50dp" >
 
         <com.google.android.material.tabs.TabLayout
@@ -44,10 +47,13 @@
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/view_pager"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="352dp"
             android:background="@drawable/customborder"/>
 
+
+
     </LinearLayout>
+
 
 
 

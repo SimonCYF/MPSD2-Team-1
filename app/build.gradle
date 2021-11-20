@@ -100,4 +100,7 @@ dependencies {
 
     //animation
     implementation 'com.airbnb.android:lottie:3.4.1'
+
+    //pop up after long press
+    implementation 'com.rm:longpresspopup:1.0.1'
 }

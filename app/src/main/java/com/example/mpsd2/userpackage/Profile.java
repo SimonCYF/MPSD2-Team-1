@@ -234,8 +234,7 @@ public class Profile extends AppCompatActivity {
         popUpCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(Profile.this, Profile.class);
-                startActivity(intent);
+                dialog.dismiss();
             }
         });
         popUpConfirm.setOnClickListener(new View.OnClickListener() {
@@ -250,8 +249,6 @@ public class Profile extends AppCompatActivity {
                 }else if (!passwordVerification.equals(password_txt)){
                     Toast.makeText(Profile.this, "Password Do Not Match!", Toast.LENGTH_SHORT).show();
                 }else{
-                    user.delete();
-                    Log.d("TAG", "User account deleted.");
                     if (user != null) {
                         user.reauthenticate(credential)
                                 .addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -295,8 +292,7 @@ public class Profile extends AppCompatActivity {
         popUpCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(Profile.this, Profile.class);
-                startActivity(intent);
+                dialog.dismiss();
             }
         });
 
@@ -368,8 +364,7 @@ public class Profile extends AppCompatActivity {
         popUpCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(Profile.this, Profile.class);
-                startActivity(intent);
+                dialog.dismiss();
             }
         });
 

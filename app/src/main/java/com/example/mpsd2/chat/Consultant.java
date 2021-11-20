@@ -1,8 +1,18 @@
 package com.example.mpsd2.chat;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -22,9 +32,11 @@ import com.example.mpsd2.swipe.SwipeMain;
 import com.example.mpsd2.userpackage.Fingerprint;
 import com.example.mpsd2.userpackage.Profile;
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Consultant extends AppCompatActivity {
 
@@ -36,10 +48,14 @@ public class Consultant extends AppCompatActivity {
             R.drawable.ic_baseline_settings_24,
             R.drawable.ic_baseline_follow_the_signs_24};
 
-    private TabLayout tabLayout,menuTabLayout;
+    private TabLayout tabLayout = null, menuTabLayout;
     private ViewPager viewPager;
     private Intent intent;
     private FirebaseAuth mAuth;
+    private Button viewHelp, backBtn;
+    private AlertDialog.Builder dialogBuilder;
+    private AlertDialog dialog;
+    private boolean test;
 
     @Override
     protected void onCreate(Bundle savedInstancesState) {
@@ -47,17 +63,28 @@ public class Consultant extends AppCompatActivity {
         setContentView(R.layout.activity_consultant);
 
 
-
         tabLayout = findViewById(R.id.tab_layout);
         viewPager = findViewById(R.id.view_pager);
+
 
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.addFragment(new ConsultantsFragment(), "Consultants");
         viewPager.setAdapter(viewPagerAdapter);
+
         tabLayout.setupWithViewPager(viewPager);
 
+        LinearLayout tabStrip = (LinearLayout) tabLayout.getChildAt(0);
+        for (int i = 0; i < tabStrip.getChildCount(); i++) {
+            tabStrip.getChildAt(i).setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    createNewContactDialog();
+                    return false;
+                }
+            });
+        }
 
-        menuTabLayout  = findViewById(R.id.tabLayout);
+        menuTabLayout = findViewById(R.id.tabLayout);
 
         menuTabLayout.getTabAt(0).setIcon(ICONS[0]);
         menuTabLayout.getTabAt(1).setIcon(ICONS[1]);
@@ -65,6 +92,7 @@ public class Consultant extends AppCompatActivity {
         menuTabLayout.getTabAt(3).setIcon(ICONS[3]);
         menuTabLayout.getTabAt(4).setIcon(ICONS[4]);
         menuTabLayout.getTabAt(5).setIcon(ICONS[5]);
+
 
         menuTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -84,20 +112,39 @@ public class Consultant extends AppCompatActivity {
         });
     }
 
-    private void switchCase(int position){
-        switch (position){
+    public void createNewContactDialog(){
+        dialogBuilder = new AlertDialog.Builder(this);
+        final View contactPopUp = getLayoutInflater().inflate(R.layout.activity_setting, null);
+        dialogBuilder.setView(contactPopUp);
+        dialog = dialogBuilder.create();
+        dialog.show();
+
+        backBtn = (Button) contactPopUp.findViewById(R.id.backbtn);
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                //intent = new Intent(Consultant.this, Consultant.class);
+                //startActivity(intent);
+            }
+        });
+
+    }
+
+    private void switchCase(int position) {
+        switch (position) {
             case 0:
-                intent = new Intent(Consultant.this,SwipeMain.class);
+                intent = new Intent(Consultant.this, SwipeMain.class);
                 startActivity(intent);
                 break;
 
             case 1:
-                intent = new Intent(Consultant.this,Scraper.class);
+                intent = new Intent(Consultant.this, Scraper.class);
                 startActivity(intent);
                 break;
 
             case 2:
-                intent = new Intent(Consultant.this,MapsFragment.class);
+                intent = new Intent(Consultant.this, MapsFragment.class);
                 startActivity(intent);
                 break;
 
@@ -118,7 +165,7 @@ public class Consultant extends AppCompatActivity {
         }
     }
 
-    private void showAlertDialog(){
+    private void showAlertDialog() {
 
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("Logout");
@@ -126,7 +173,7 @@ public class Consultant extends AppCompatActivity {
         alert.setPositiveButton("Logout", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(Consultant.this,"Logged Out",Toast.LENGTH_SHORT).show();
+                Toast.makeText(Consultant.this, "Logged Out", Toast.LENGTH_SHORT).show();
                 mAuth.signOut();
                 intent = new Intent(Consultant.this, MainActivity.class);
                 startActivity(intent);
@@ -176,4 +223,6 @@ public class Consultant extends AppCompatActivity {
             return titles.get(position);
         }
     }
+
+
 }

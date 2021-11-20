@@ -42,7 +42,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/passwordToDelete"
                         android:layout_width="275dp"
-                        android:hint="Old Password Enter Here"
+                        android:hint="Password Enter Here"
                         android:textColor="@color/headings"
                         android:inputType="textPassword"
                         android:layout_height="wrap_content" />
