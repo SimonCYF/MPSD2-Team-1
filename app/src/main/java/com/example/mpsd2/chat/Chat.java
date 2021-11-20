@@ -1,11 +1,16 @@
 package com.example.mpsd2.chat;
 
+import android.annotation.SuppressLint;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -18,6 +23,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mpsd2.R;
+import com.example.mpsd2.blockchain.Block;
 import com.example.mpsd2.userpackage.User;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -26,6 +32,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -43,10 +50,18 @@ public class Chat extends AppCompatActivity {
     List<Message> mMessage;
     RecyclerView recyclerView;
 
+    public static ArrayList<Block> blockchain = new ArrayList<Block>();
+    public static int difficulty = 2;
+    public static int count = 0;
+
+
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("SharedPref", MODE_PRIVATE);
+        SharedPreferences.Editor myEdit = sharedPreferences.edit();
 
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
@@ -68,6 +83,10 @@ public class Chat extends AppCompatActivity {
                 String msg = send_msg.getText().toString();
                 if (!msg.equals("")){
                     sendMessage(fuser.getUid(), userid, msg);
+                    myEdit.putString("msg", msg);
+                    myEdit.commit();
+                    Content content = new Content();
+                    content.execute();
                 } else {
                     Toast.makeText(Chat.this, "You can't send empty message", Toast.LENGTH_SHORT).show();
                 }
@@ -148,5 +167,53 @@ public class Chat extends AppCompatActivity {
         // Add as notification
         NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         manager.notify(0, builder.build());
+    }
+
+    private class Content extends AsyncTask<Void,Void,Void> {
+
+        @SuppressLint("WrongConstant")
+        SharedPreferences sp = getSharedPreferences("SharedPref", MODE_PRIVATE);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("SharedPref", MODE_PRIVATE);
+        SharedPreferences.Editor myEdit = sharedPreferences.edit();
+
+        String msg = sp.getString("msg","");
+
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            if (count ==0){
+                blockchain.add(new Block(msg, "0"));
+                blockchain.get(count).mineBlock(difficulty);
+                count+=1;
+            }else {
+                blockchain.add(new Block(msg, blockchain.get(blockchain.size() - 1).hash));
+                blockchain.get(count).mineBlock(difficulty);
+                count+=1;
+            }
+
+            return  null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+            Toast.makeText(Chat.this,"Stored Into BlockChain",Toast.LENGTH_SHORT).show();
+
+            String blockchainJson = new GsonBuilder().setPrettyPrinting().create().toJson(blockchain);
+            Log.d("Blockchain MPSD2",blockchainJson);
+
+            String removed = blockchainJson.replace("{","");
+            String removedBack = removed.replace("}","");
+            String removedBackN = removedBack.replace("\n","");
+            String removedBackNN = removedBackN.replace("\\","");
+            String removedBackNNEnd = removedBackNN.replace("\"","");
+            String removedBackNNEndLast = removedBackNN.replace("]","NEXT BLOCKCHAIN");
+
+            myEdit.putString("block", String.valueOf(removedBackNNEnd));
+            myEdit.commit();
+
+            return;
+        }
     }
 }

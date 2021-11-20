@@ -4,12 +4,15 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.mpsd2.blockchain.Block;
+import com.example.mpsd2.scraper.Scraper;
 import com.example.mpsd2.swipe.SwipeMain;
 import com.example.mpsd2.userpackage.Animation;
 import com.example.mpsd2.userpackage.Register;
@@ -22,7 +25,13 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.gson.GsonBuilder;
 
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
+
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
@@ -82,6 +91,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         auth = FirebaseAuth.getInstance();
+
+
     }
 
     public void login() {
@@ -123,4 +134,8 @@ public class MainActivity extends AppCompatActivity {
                     });
         }
     }
+
+
+
+
 }

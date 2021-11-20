@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="25dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="25dp"
         android:layout_marginStart="50dp" >
 
         <com.google.android.material.tabs.TabLayout
@@ -47,12 +47,27 @@
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/view_pager"
             android:layout_width="match_parent"
-            android:layout_height="352dp"
+            android:layout_height="310dp"
             android:background="@drawable/customborder"/>
 
-
+        <Button
+            android:id="@+id/viewChatHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:fontFamily="@font/extraboldfont"
+            android:text="View Blockchain"
+            android:textColor="@color/black"
+            app:backgroundTint="@android:color/transparent"
+            tools:ignore="ButtonStyle"
+            tools:layout_editor_absoluteX="9dp"
+            tools:layout_editor_absoluteY="650dp" />
 
     </LinearLayout>
+
 
 
 

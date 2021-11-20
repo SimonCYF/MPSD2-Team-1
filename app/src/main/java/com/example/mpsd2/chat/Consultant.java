@@ -26,6 +26,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.example.mpsd2.MainActivity;
 import com.example.mpsd2.R;
+import com.example.mpsd2.blockchain.DisplayBlockchain;
 import com.example.mpsd2.map.MapsFragment;
 import com.example.mpsd2.scraper.Scraper;
 import com.example.mpsd2.swipe.SwipeMain;
@@ -52,7 +53,7 @@ public class Consultant extends AppCompatActivity {
     private ViewPager viewPager;
     private Intent intent;
     private FirebaseAuth mAuth;
-    private Button viewHelp, backBtn;
+    private Button viewChatBlockchain, backBtn;
     private AlertDialog.Builder dialogBuilder;
     private AlertDialog dialog;
     private boolean test;
@@ -65,6 +66,7 @@ public class Consultant extends AppCompatActivity {
 
         tabLayout = findViewById(R.id.tab_layout);
         viewPager = findViewById(R.id.view_pager);
+        viewChatBlockchain = (Button) findViewById(R.id.viewChatHistory);
 
 
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
@@ -83,6 +85,14 @@ public class Consultant extends AppCompatActivity {
                 }
             });
         }
+
+        viewChatBlockchain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(Consultant.this, DisplayBlockchain.class);
+                startActivity(intent);
+            }
+        });
 
         menuTabLayout = findViewById(R.id.tabLayout);
 
@@ -124,8 +134,6 @@ public class Consultant extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 dialog.dismiss();
-                //intent = new Intent(Consultant.this, Consultant.class);
-                //startActivity(intent);
             }
         });
 
