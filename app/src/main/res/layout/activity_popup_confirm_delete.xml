@@ -29,7 +29,7 @@
                     android:layout_height="wrap_content"
                     android:text="Confirm Delete?"
                     android:fontFamily="@font/regularfont"
-                    android:textColor="@color/headings"
+                    android:textColor="@color/black"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
@@ -83,8 +83,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Cancel"
-                    android:fontFamily="@font/regularfont"
-                    android:textColor="@color/headings"
+                    android:fontFamily="@font/boldfont"
+                    android:textColor="@color/black"
                     android:id="@+id/btnCancelDelete"
                     android:background="@android:color/transparent"/>
 
@@ -112,8 +112,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Confirm Delete"
-                    android:fontFamily="@font/regularfont"
-                    android:textColor="@color/white"
+                    android:fontFamily="@font/boldfont"
+                    android:textColor="@color/black"
                     android:id="@+id/btnConfirmDelete"
                     android:background="@android:color/transparent"/>
 

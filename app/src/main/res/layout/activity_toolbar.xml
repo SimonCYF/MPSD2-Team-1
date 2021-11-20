@@ -16,20 +16,20 @@
         android:layout_marginTop="0dp"
         android:background="@color/white"
         android:elevation="6dp"
-        app:tabIconTint="@color/headings"
+        app:tabIconTint="@color/teal_700"
         app:tabIndicatorAnimationDuration="1200"
         app:tabIndicatorColor="@color/white"
         app:tabInlineLabel="true"
         app:tabMode="scrollable"
         app:tabRippleColor="@color/purple_200"
-        app:tabTextColor="@color/headings">
+        app:tabTextColor="@color/black">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/navToViewNews"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbarStyle="insideInset"
-            android:text="View News"
+            android:text="Covid Facts"
             android:textColor="@color/pearlwhite"
             android:textStyle="bold">
 

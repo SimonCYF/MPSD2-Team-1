@@ -27,7 +27,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/regularfont"
                     android:text="Current Username"
-                    android:textColor="@color/headings"
+                    android:textColor="@color/black"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
@@ -36,15 +36,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/lightfont"
+                    android:layout_marginTop="30dp"
                     android:text="ali@test.com"
-                    android:textColor="@color/headings"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="3dp"
                     android:background="@color/grey" />
 
             </LinearLayout>
@@ -97,8 +98,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Cancel"
-                    android:fontFamily="@font/regularfont"
-                    android:textColor="@color/headings"
+                    android:fontFamily="@font/boldfont"
+                    android:textColor="@color/black"
                     android:id="@+id/btnCancel"
                     android:background="@android:color/transparent"/>
 
@@ -126,8 +127,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Confirm Update"
-                    android:fontFamily="@font/regularfont"
-                    android:textColor="@color/white"
+                    android:fontFamily="@font/boldfont"
+                    android:textColor="@color/black"
                     android:id="@+id/btnConfirm"
                     android:background="@android:color/transparent"/>
 

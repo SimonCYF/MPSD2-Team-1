@@ -82,6 +82,8 @@
             android:usesCleartextTraffic="true"/>
 
         <activity android:name=".pdf.PDFActivity"/>
+
+        <activity android:name=".userpackage.NotificationView"/>
     </application>
 
 </manifest>

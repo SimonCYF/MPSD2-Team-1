@@ -50,7 +50,7 @@
             android:id="@+id/email"
             android:hint="@string/email_txt"
             android:inputType="textEmailAddress"
-            android:textColor="@color/headings"
+            android:textColor="@color/DarkBlue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -64,7 +64,7 @@
             android:id="@+id/password"
             android:hint="@string/password_txt"
             android:layout_width="match_parent"
-            android:textColor="@color/headings"
+            android:textColor="@color/DarkBlue"
             android:inputType="textPassword"
             android:layout_height="wrap_content"/>
     </com.google.android.material.textfield.TextInputLayout>

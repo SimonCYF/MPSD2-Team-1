@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/drawable-v24/circle.xml" value="0.25555555555555554" />
+        <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/drawable-v24/circle_border.xml" value="0.25555555555555554" />
         <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/drawable-v24/grad.xml" value="0.19444444444444445" />
         <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/drawable/background_left.xml" value="0.1" />
         <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/drawable/background_right.xml" value="0.264" />
+        <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/drawable/chatboarder.xml" value="0.25555555555555554" />
         <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/drawable/customborder.xml" value="0.1" />
         <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/drawable/gradblue.xml" value="0.26615384615384613" />
         <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/drawable/gradgrey.xml" value="0.19444444444444445" />
@@ -43,18 +46,19 @@
         <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/layout/activity_map_fragment.xml" value="0.1" />
         <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/layout/activity_navigation.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/layout/activity_notification.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/layout/activity_popup_change_password.xml" value="0.264" />
         <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/layout/activity_popup_change_username.xml" value="0.238562091503268" />
         <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/layout/activity_popup_confirm_delete.xml" value="0.264" />
         <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/layout/activity_profile.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/layout/activity_recycle_view_horizontal.xml" value="0.4" />
-        <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/layout/activity_register.xml" value="0.264" />
+        <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/layout/activity_recycle_view_horizontal.xml" value="0.264" />
+        <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/layout/activity_register.xml" value="0.2" />
         <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/layout/activity_scraper_view.xml" value="0.264" />
         <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/layout/activity_scraper_view_new.xml" value="0.264" />
         <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/layout/activity_setting.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/layout/activity_swipe_left_page.xml" value="0.264" />
         <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/layout/activity_swipe_main_page.xml" value="0.264" />
-        <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/layout/activity_swipe_right_page.xml" value="0.2" />
+        <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/layout/activity_swipe_right_page.xml" value="0.264" />
         <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/layout/activity_toolbar.xml" value="0.264" />
         <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/layout/activity_update_info.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/Desktop/MPSD2/MPSD2/app/src/main/res/layout/activity_view_pdf.xml" value="0.1" />

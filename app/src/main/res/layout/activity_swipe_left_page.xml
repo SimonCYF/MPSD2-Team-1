@@ -15,10 +15,10 @@
         android:layout_centerInParent="true"
         android:layout_marginTop="29dp"
         android:layout_marginBottom="3dp"
-        android:text="@string/view_vaccine_brand"
-        android:textColor="@color/white"
-        android:textSize="20sp"
         android:fontFamily="@font/extraboldfont"
+        android:text="Covid Vaccine"
+        android:textColor="@color/black"
+        android:textSize="28sp"
         tools:layout_editor_absoluteX="67dp"
         tools:layout_editor_absoluteY="2dp" />
 
@@ -26,7 +26,7 @@
         android:id="@+id/btn_left_left"
         android:layout_width="44dp"
         android:layout_height="44dp"
-        app:tint="@color/white"
+        app:tint="@color/black"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="10dp"
@@ -42,7 +42,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="355dp"
-        app:tint="@color/white"
+        app:tint="@color/black"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="12dp"
         android:background="@android:color/transparent"
@@ -61,11 +61,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regularfont"
+                android:gravity="center"
+                android:textColor="@color/teal_700"
+                android:text="Swipe Right To View All Content"
+                android:textSize="17dp" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycleViewForVaccines"
                 android:layout_width="match_parent"
-                android:layout_height="475dp"
-                android:layout_marginLeft="10dp"
+                android:layout_height="400dp"
+                android:layout_below="@+id/textView"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:orientation="horizontal" />
@@ -76,10 +86,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/recycleViewForVaccines"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginBottom="10dp"
                 android:fontFamily="@font/boldfont"
-                android:text="Click to View The PDF"
+                android:text="Click to View The Government PDF"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 

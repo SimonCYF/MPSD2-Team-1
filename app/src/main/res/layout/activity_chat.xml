@@ -12,13 +12,15 @@
         android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="10dp"
         android:fontFamily="@font/extraboldfont"
-        android:paddingTop="40dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="20dp"
         android:text="@string/consultant"
         android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="50sp"></TextView>
+        android:textColor="@color/black"
+        android:textSize="42sp"></TextView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
@@ -44,8 +46,9 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/enter_btn"
-            android:background="@drawable/customborder"
-            android:hint="@string/type" />
+            android:background="@drawable/chatborder"
+            android:hint="@string/type"
+            android:textColor="@color/black" />
 
         <ImageButton
             android:id="@+id/enter_btn"

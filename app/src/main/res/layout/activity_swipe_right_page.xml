@@ -15,10 +15,10 @@
         android:layout_centerInParent="true"
         android:layout_marginTop="29dp"
         android:layout_marginBottom="3dp"
-        android:text="@string/view_covid_news"
-        android:textColor="@color/white"
-        android:textSize="20sp"
         android:fontFamily="@font/extraboldfont"
+        android:text="@string/view_covid_news"
+        android:textColor="@color/black"
+        android:textSize="28sp"
         tools:layout_editor_absoluteX="67dp"
         tools:layout_editor_absoluteY="2dp" />
 
@@ -30,9 +30,9 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="10dp"
         android:layout_marginTop="30dp"
-        app:tint="@color/white"
         android:background="@android:color/transparent"
-        android:src="@drawable/ic_baseline_undo_24" />
+        android:src="@drawable/ic_baseline_undo_24"
+        app:tint="@color/black" />
 
     <ImageButton
         android:id="@+id/btn_right_right"
@@ -44,9 +44,9 @@
         android:layout_marginStart="355dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="12dp"
-        app:tint="@color/white"
         android:background="@android:color/transparent"
-        android:src="@drawable/ic_baseline_redo_24" />
+        android:src="@drawable/ic_baseline_redo_24"
+        app:tint="@color/black" />
 
 
     <com.google.android.material.tabs.TabLayout
@@ -56,11 +56,11 @@
         android:layout_below="@+id/covidNews"
         android:layout_marginTop="0dp"
         android:backgroundTint="@color/white"
-        app:tabIndicatorColor="@color/headings"
+        app:tabIndicatorColor="@color/black"
         app:tabIndicatorHeight="3.5dp"
         app:tabMode="scrollable"
-        app:tabSelectedTextColor="@color/black"
-        app:tabTextColor="@color/headings">
+        app:tabSelectedTextColor="@color/headings"
+        app:tabTextColor="@color/black">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/homeNews"

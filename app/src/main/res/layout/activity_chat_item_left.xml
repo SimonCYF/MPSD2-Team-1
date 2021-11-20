@@ -11,10 +11,10 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         android:background="@drawable/background_left"
+        android:fontFamily="@font/regularfont"
         android:padding="8dp"
-        android:fontFamily="@font/lightfont"
-        android:textColor="@color/black"
         android:text="hello"
+        android:textColor="@color/white"
         android:textSize="18sp" />
 
 </RelativeLayout>

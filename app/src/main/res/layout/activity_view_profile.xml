@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/grad"
     android:layout_height="match_parent">
+
 
     <RelativeLayout
         android:id="@+id/rellay1"
@@ -45,7 +47,7 @@
             android:layout_marginTop="15sp"
             android:fontFamily="@font/boldfont"
             android:text="Username"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="32sp" />
 
 
@@ -78,8 +80,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Update Password"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/regularfont"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/boldfont"
                     android:id="@+id/updatePassword"
                     android:background="@android:color/transparent"/>
 
@@ -107,8 +109,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Update Username"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/regularfont"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/boldfont"
                     android:id="@+id/updateUsername"
                     android:background="@android:color/transparent"/>
 
@@ -137,6 +139,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -147,15 +150,16 @@
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/ic_baseline_email_24" />
+                        android:src="@drawable/ic_baseline_email_24"
+                        app:tint="@color/black" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/boldfont"
                         android:text="Email"
-                        android:fontFamily="@font/regularfont"
-                        android:textColor="@color/headings"
+                        android:textColor="@color/black"
                         android:textSize="20dp"
                         android:textStyle="bold" />
 
@@ -165,15 +169,16 @@
                     android:id="@+id/emailAdd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/regularfont"
                     android:text="ali@test.com"
-                    android:textColor="@color/headings"
-                    android:textSize="20sp"
-                    android:fontFamily="@font/lightfont"/>
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="3dp"
                     android:background="@color/grey" />
 
             </LinearLayout>
@@ -182,6 +187,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:background="@color/white"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -192,15 +198,16 @@
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/ic_baseline_local_phone_24" />
+                        android:src="@drawable/ic_baseline_local_phone_24"
+                        app:tint="@color/black" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="20dp"
-                        android:fontFamily="@font/regularfont"
+                        android:fontFamily="@font/boldfont"
                         android:text="Phone"
-                        android:textColor="@color/headings"
+                        android:textColor="@color/black"
                         android:textSize="20dp"
                         android:textStyle="bold" />
 
@@ -211,16 +218,17 @@
                     android:id="@+id/phoneNum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="+1-202-555-0157"
+                    android:layout_marginTop="13dp"
                     android:fontFamily="@font/lightfont"
-                    android:textColor="@color/headings"
+                    android:text="+1-202-555-0157"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="3dp"
                     android:background="@color/grey" />
 
             </LinearLayout>
@@ -237,11 +245,16 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/relativeLayout"
         android:layout_centerHorizontal="true"
-        android:background="@android:color/transparent"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/extraboldfont"
         android:text="Delete Account"
-        android:fontFamily="@font/boldfont"
-        android:textColor="@color/headings"
-        android:textStyle="bold" />
+        android:textColor="@color/black"
+        android:background="@color/white"
+        app:backgroundTint="@android:color/transparent"
+        tools:ignore="ButtonStyle"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="650dp" />
 
     <include
         android:id="@+id/mytoolbar"

@@ -46,18 +46,18 @@
                 android:autoSizeMaxTextSize="15sp"
                 android:autoSizeMinTextSize="8sp"
                 android:autoSizeTextType="uniform"
+                android:fontFamily="@font/extraboldfont"
                 android:gravity="center"
                 android:text="Hey"
-                android:textColor="@color/white"
-                android:fontFamily="@font/boldfont" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/horizontalDetails"
                 android:layout_width="match_parent"
-                android:layout_height="190dp"
+                android:layout_height="235dp"
                 android:layout_below="@+id/horizontalName"
                 android:layout_marginLeft="12dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="12dp"
                 android:layout_marginBottom="5dp"
                 android:fontFamily="@font/regularfont"
@@ -66,7 +66,6 @@
                 android:text="Bobi Bobi Bobi Bobi Bobi Bobi "
                 android:textColor="@color/black"
                 android:textSize="15dp" />
-
 
 
         </RelativeLayout>

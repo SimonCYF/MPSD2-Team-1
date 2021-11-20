@@ -10,7 +10,7 @@
 
     <!--REGISTRATION PAGE TITLE-->
     <TextView
-        android:layout_marginStart="90dp"
+        android:layout_gravity="center"
         android:textStyle="bold"
         android:paddingTop="60dp"
         android:textAlignment="center"
@@ -29,121 +29,128 @@
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_marginTop="10dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_marginStart="30dp"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            >
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="@string/username_txt"
                 android:inputType="textPersonName"
-                android:textColor="@color/headings"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:textColor="@color/DarkBlue" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_marginTop="10dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_marginStart="30dp"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            >
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email"
-                android:hint="@string/email_txt"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email_txt"
                 android:inputType="textEmailAddress"
-                android:textColor="@color/headings"
-                android:layout_height="wrap_content"/>
+                android:textColor="@color/DarkBlue" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_marginTop="10dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_marginStart="30dp"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            >
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="@string/phone_txt"
                 android:inputType="textPhonetic"
-                android:layout_width="match_parent"
-                android:textColor="@color/headings"
-                android:layout_height="wrap_content"/>
+                android:textColor="@color/DarkBlue" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            app:passwordToggleEnabled="true"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            app:passwordToggleEnabled="true">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="@string/password_txt"
                 android:inputType="textPassword"
-                android:textColor="@color/headings"
-                android:layout_height="wrap_content" />
+                android:textColor="@color/DarkBlue" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            app:passwordToggleEnabled="true"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            app:passwordToggleEnabled="true">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/confirm"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="@string/confirm_txt"
                 android:inputType="textPassword"
-                android:textColor="@color/headings"
-                android:layout_height="wrap_content" />
+                android:textColor="@color/DarkBlue" />
         </com.google.android.material.textfield.TextInputLayout>
 
-</LinearLayout>
+    </LinearLayout>
 
-<LinearLayout
-android:layout_width="wrap_content"
-android:layout_height="match_parent"
-    android:orientation="horizontal">
-<Button
-    android:id="@+id/back_btn"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="27dp"
-    android:layout_marginStart="40dp"
-    android:text="@string/back_btn"
-    android:textColor="@color/headings"
-    android:fontFamily="@font/regularfont"
-    app:backgroundTint="@android:color/transparent"
-    tools:layout_editor_absoluteX="9dp"
-    tools:layout_editor_absoluteY="650dp"
-    tools:ignore="ButtonStyle" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/reg_btn"
-    android:layout_marginStart="150dp"
-    android:layout_marginEnd="10dp"
-    android:text="@string/register_btn"
-    android:backgroundTint="@color/headings"
-    android:fontFamily="@font/regularfont"
-    android:textAlignment="center"
-    android:layout_marginTop="30dp"
-    tools:ignore="ButtonStyle" />
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="27dp"
+            android:backgroundTint="@color/headings"
+            android:fontFamily="@font/regularfont"
+            android:text="@string/back_btn"
+            android:textColor="@color/black"
+            app:backgroundTint="@android:color/transparent"
+            tools:ignore="ButtonStyle"
+            tools:layout_editor_absoluteX="9dp"
+            tools:layout_editor_absoluteY="650dp" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/reg_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/headings"
+            android:fontFamily="@font/regularfont"
+            android:text="@string/register_btn"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            tools:ignore="ButtonStyle"
+            tools:layout_editor_absoluteX="9dp"
+            tools:layout_editor_absoluteY="650dp" />
+
+    </LinearLayout>
 
 </LinearLayout>
